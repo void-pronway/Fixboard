@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FixBoard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>FixBoard</h1>
+      <p>A mini campus issue reporting system</p>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Report an Issue</h2>
+
+        <form id="issueForm">
+          <input type="text" id="title" placeholder="Issue title" required />
+
+          <textarea
+            id="description"
+            placeholder="Describe the issue"
+            required
+          ></textarea>
+
+          <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="Network">Network</option>
+            <option value="Classroom">Classroom</option>
+            <option value="Lab">Lab</option>
+            <option value="Lost and Found">Lost and Found</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <button type="submit">Submit Issue</button>
+        </form>
+      </section>
+
+      <section class="issues-section">
+        <h2>Submitted Issues</h2>
+        <div id="issuesList"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
