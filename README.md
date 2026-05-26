@@ -346,14 +346,6 @@ When a student submits an issue:
 
 ---
 
-## 📄 Documentation
-
-- **Project Report:** Add link here
-- **Presentation Slides:** Add link here
-- **Demo Video:** Add link here
-
----
-
 ## Contact
 
 **Developer:** Pronway Prosoon Mitra
