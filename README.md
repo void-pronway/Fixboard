@@ -295,7 +295,7 @@ DNS record:
 
 | Type    | Name | Content / Target                 | Proxy    |
 | ------- | ---- | -------------------------------- | -------- |
-| `CNAME` | `@`  | `fixboard-frontend.onrender.com` | DNS Only |
+| `CNAME` | `@`  | `******************************` | DNS Only |
 
 Final website URL:
 
