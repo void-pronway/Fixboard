@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #78e4ff;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(126, 61, 255, 0.45),
+      transparent 35%
+    ),
+    linear-gradient(180deg, #020412 0%, #09051c 45%, #6f35ff 100%);
+}
+
+body.light-mode {
+  color: #241047;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(177, 132, 255, 0.55),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(215, 190, 255, 0.65),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 50% 85%,
+      rgba(151, 95, 255, 0.38),
+      transparent 38%
+    ),
+    linear-gradient(135deg, #ffffff 0%, #f8f3ff 28%, #eadcff 58%, #d7c2ff 100%);
+}
+
+header {
+  position: relative;
+  background: rgba(29, 12, 58, 0.92);
+  color: white;
+  text-align: center;
+  padding: 38px 15px;
+  border-bottom: 5px solid rgba(180, 150, 255, 0.25);
+  box-shadow: 0 8px 35px rgba(111, 53, 255, 0.35);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  border: 1px solid rgba(190, 170, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 9px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+body.light-mode header {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(233, 218, 255, 0.88)
+  );
+  color: #241047;
+  border-bottom: 4px solid rgba(123, 44, 255, 0.25);
+  box-shadow: 0 8px 35px rgba(123, 44, 255, 0.18);
+}
+
+body.light-mode header p {
+  color: #4f3f7a;
+}
+
+body.light-mode .theme-toggle {
+  background: rgba(111, 53, 255, 0.1);
+  color: #160b3b;
+  border: 1px solid rgba(111, 53, 255, 0.25);
+}
+
+body.light-mode .form-section,
+body.light-mode .issues-section {
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(130, 75, 255, 0.22);
+  box-shadow: 0 18px 45px rgba(123, 44, 255, 0.2);
+  backdrop-filter: blur(14px);
+}
+
+body.light-mode h2 {
+  color: #160b3b;
+}
+
+body.light-mode form input,
+body.light-mode form textarea,
+body.light-mode form select {
+  background: white;
+  color: #838383;
+  border: 1px solid rgba(111, 53, 255, 0.25);
+}
+
+body.light-mode form select option {
+  background-color: #f3eaff;
+  color: #241047;
+}
+
+body.light-mode form input::placeholder,
+body.light-mode form textarea::placeholder {
+  color: #777;
+}
+
+body.light-mode .issue-card {
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  border-left: 5px solid #7b2cff;
+}
+
+body.light-mode .issue-card h3 {
+  color: #111;
+}
+
+body.light-mode .issue-card p {
+  color: #222;
+}
+
+body.light-mode .status {
+  color: #111;
+}
+
+header h1 {
+  font-size: 44px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  font-size: 16px;
+  color: #d8d0ff;
+}
+
+/* Main two-column layout */
+main {
+  width: 92%;
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.form-section,
+.issues-section {
+  background: rgba(12, 10, 32, 0.78);
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(190, 170, 255, 0.22);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(190, 170, 255, 0.35);
+  border-radius: 10px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #838383;
+  outline: none;
+}
+
+form select option {
+  background-color: #211b35;
+  color: #ffffff;
+}
+
+form textarea {
+  height: 120px;
+  resize: none;
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffffff, #d9ccff);
+  color: #150c35;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(126, 61, 255, 0.35);
+}
+
+form button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #ffffff, #bca6ff);
+}
+
+/* Issues right side */
+#issuesList {
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.issue-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 5px solid #8c5cff;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.issue-card h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.issue-card p {
+  margin-bottom: 6px;
+  line-height: 1.4;
+  color: #e8e2ff;
+}
+
+.status {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#issuesList::-webkit-scrollbar {
+  width: 8px;
+}
+
+#issuesList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+#issuesList::-webkit-scrollbar-thumb {
+  background: #8c5cff;
+  border-radius: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 34px;
+  }
+}

@@ -2,6 +2,29 @@ const API_URL = "https://fixboard-lrqx.onrender.com";
 
 const issueForm = document.getElementById("issueForm");
 const issuesList = document.getElementById("issuesList");
+const themeToggle = document.getElementById("themeToggle");
+
+// Theme setup
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+  document.body.classList.add("light-mode");
+  themeToggle.textContent = "🌙 Dark";
+} else {
+  themeToggle.textContent = "☀️ Light";
+}
+
+themeToggle.addEventListener("click", function () {
+  document.body.classList.toggle("light-mode");
+
+  if (document.body.classList.contains("light-mode")) {
+    themeToggle.textContent = "🌙 Dark";
+    localStorage.setItem("theme", "light");
+  } else {
+    themeToggle.textContent = "☀️ Light";
+    localStorage.setItem("theme", "dark");
+  }
+});
 
 async function loadIssues() {
   try {
@@ -20,12 +43,12 @@ async function loadIssues() {
       issueCard.className = "issue-card";
 
       issueCard.innerHTML = `
-                <h3>${issue.title}</h3>
-                <p>${issue.description}</p>
-                <p><strong>Category:</strong> ${issue.category}</p>
-                <p class="status">Status: ${issue.status}</p>
-                <p><small>Created at: ${issue.created_at}</small></p>
-            `;
+        <h3>${issue.title}</h3>
+        <p>${issue.description}</p>
+        <p><strong>Category:</strong> ${issue.category}</p>
+        <p class="status">Status: ${issue.status}</p>
+        <p><small>Created at: ${issue.created_at}</small></p>
+      `;
 
       issuesList.appendChild(issueCard);
     });
