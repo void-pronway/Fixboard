@@ -25,6 +25,7 @@ It is deployed using **Render** for both frontend and backend, with **Aiven MySQ
 ## 📸 Demo Images
 
 ![FixBoard Dark Theme Demo](resources/main_page_dark.png)
+![FixBoard light Theme Demo](resources/main_page_light.png)
 
 ---
 
