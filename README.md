@@ -358,9 +358,8 @@ When a student submits an issue:
 
 **Developer:** Pronway Prosoon Mitra
 
-- 📧 **Email:** add-your-email-here
-- 🌐 **Portfolio:** add-portfolio-link-here
-- ℹ️ **LinkedIn:** add-linkedin-link-here
+- 📧 **Email:** pronwaymitra135@gmail.com
+- ℹ️ **LinkedIn:** [https://www.linkedin.com/in/pronway-mitra](https://www.linkedin.com/in/pronway-mitra/)
 - 💻 **GitHub:** [https://github.com/void-pronway](https://github.com/void-pronway)
 
 ---
