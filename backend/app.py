@@ -23,6 +23,28 @@ def get_db_connection():
 def home():
     return jsonify({"message": "FixBoard API is running"})
 
+@app.route("/ping-db", methods=["GET"])
+def ping_db():
+    try:
+        connection = get_db_connection()
+
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT 1 AS status")
+            result = cursor.fetchone()
+
+        connection.close()
+
+        return jsonify({
+            "database": "alive",
+            "result": result
+        }), 200
+
+    except Exception as e:
+        return jsonify({
+            "database": "error",
+            "error": str(e)
+        }), 500
+
 @app.route("/issues", methods=["GET"])
 def get_issues():
     try:
