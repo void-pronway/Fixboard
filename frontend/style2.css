@@ -102,9 +102,15 @@ body.light-mode h2 {
 body.light-mode form input,
 body.light-mode form textarea,
 body.light-mode form select {
-  background: white;
-  color: #838383;
+  background: rgba(255, 255, 255, 0.75);
+  color: #241047;
   border: 1px solid rgba(111, 53, 255, 0.25);
+}
+
+body.light-mode form input::placeholder,
+body.light-mode form textarea::placeholder {
+  color: #8b7ba8;
+  opacity: 1;
 }
 
 body.light-mode form select option {
@@ -185,6 +191,12 @@ form select {
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
   outline: none;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #9b94b8;
+  opacity: 1;
 }
 
 form select option {
